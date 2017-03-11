@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
+    flash()->success('Hey There! Welcome to Basix for Laravel 5.4');
     return view('welcome');
 });

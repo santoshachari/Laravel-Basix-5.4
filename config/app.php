@@ -177,6 +177,12 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Packages added for Basix 5.4
+         */
+        //Laracasts Flash
+        Laracasts\Flash\FlashServiceProvider::class,
+
     ],
 
     /*
