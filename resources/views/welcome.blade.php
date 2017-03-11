@@ -93,7 +93,7 @@
     <div class="content">
         @include('flash::message')
         <div class="title m-b-md">
-            Laravel
+            Laravel 5.4 Basix
         </div>
 
         <div class="links">
