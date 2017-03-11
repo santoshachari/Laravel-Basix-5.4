@@ -20,6 +20,15 @@ Route::get('/posts', function () {
     return view('posts');
 });
 
+Route::get('/imageResize',function(){
+    $img = Image::make(public_path('images/charminar.jpg'))->fit(400, 200,null,"top");
+    return $img->response('jpg');
+});
+
+Route::get('imageManipulation',function(){
+   return view('images');
+});
+
 Route::get('/{slug}', function ($slug) {
     $post = \App\Post::findBySlugOrFail($slug);
     return view('post')->with('post', $post);

@@ -104,6 +104,8 @@
                 <a href="{{ url('/admin/login') }}">Admin Login</a>
                 <a href="{{ url('/admin/register') }}">Admin Register</a>
             @endif
+
+            <a href="{{ url('/imageManipulation') }}">Image Manipulation</a>
         </div>
     </div>
 </div>

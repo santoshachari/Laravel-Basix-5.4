@@ -188,6 +188,8 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         //Slugs
         Cviebrock\EloquentSluggable\ServiceProvider::class,
+        //Image Manipulation
+        Intervention\Image\ImageServiceProvider::class,
 
     ],
 
@@ -245,6 +247,7 @@ return [
         //Forms and HTML package by Laravel Collective
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 
