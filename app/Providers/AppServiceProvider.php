@@ -27,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
             $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
             $this->app->register('\Laracademy\Generators\GeneratorsServiceProvider');
             $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+            $this->app->register('Hesto\MultiAuth\MultiAuthServiceProvider');
         }
     }
 }
