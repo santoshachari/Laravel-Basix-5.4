@@ -186,6 +186,8 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         //Forms and HTML package by Laravel Collective
         Collective\Html\HtmlServiceProvider::class,
+        //Slugs
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
 
     ],
 
