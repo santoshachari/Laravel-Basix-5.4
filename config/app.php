@@ -182,6 +182,10 @@ return [
          */
         //Laracasts Flash
         Laracasts\Flash\FlashServiceProvider::class,
+        //Debug bar
+        Barryvdh\Debugbar\ServiceProvider::class,
+        //Forms and HTML package by Laravel Collective
+        Collective\Html\HtmlServiceProvider::class,
 
     ],
 
@@ -231,6 +235,14 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        /*
+         * Vendor specific Facades
+         */
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        //Forms and HTML package by Laravel Collective
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 
