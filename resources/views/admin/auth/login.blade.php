@@ -59,6 +59,8 @@
                                 </a>
                             </div>
                         </div>
+                        <hr>
+                        <p class="text-center">Do not have an Account? <a href="{{ url('/admin/register') }}">Register</a></p>
                     </form>
                 </div>
             </div>

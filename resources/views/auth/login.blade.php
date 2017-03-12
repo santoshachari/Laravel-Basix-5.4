@@ -7,6 +7,10 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
+                    <div class="text-center">
+                        <a class="btn btn-primary" href="{{ action('Auth\SocialController@redirectToProvider') }}"><span class="glyphicon glyphicon-thumbs-up"></span> Login with Facebook</a>
+                    </div>
+                    <hr>
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 

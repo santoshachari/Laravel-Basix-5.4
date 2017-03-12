@@ -20,21 +20,22 @@ Route::get('/posts', function () {
     return view('posts');
 });
 
-Route::get('/imageResize',function(){
-    $img = Image::make(public_path('images/charminar.jpg'))->fit(400, 200,null,"top");
+Route::get('/imageResize', function () {
+    $img = Image::make(public_path('images/charminar.jpg'))->fit(400, 200, null, "top");
     return $img->response('jpg');
 });
 
-Route::get('imageManipulation',function(){
-   return view('images');
+Route::get('imageManipulation', function () {
+    return view('images');
 });
 
-Route::get('/{slug}', function ($slug) {
-    $post = \App\Post::findBySlugOrFail($slug);
-    return view('post')->with('post', $post);
-});
 
 Auth::routes();
+
+//Social Login
+//Facebook Login
+Route::get('/auth/facebook', 'Auth\SocialController@redirectToProvider');
+Route::get('/auth/facebook/callback', 'Auth\SocialController@handleProviderCallback');
 
 Route::get('/home', 'HomeController@index');
 
@@ -51,4 +52,10 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/password/reset', 'AdminAuth\ResetPasswordController@reset');
     Route::get('/password/reset', 'AdminAuth\ForgotPasswordController@showLinkRequestForm');
     Route::get('/password/reset/{token}', 'AdminAuth\ResetPasswordController@showResetForm');
+});
+
+//Always have wildcard routes like this at bottom
+Route::get('/{slug}', function ($slug) {
+    $post = \App\Post::findBySlugOrFail($slug);
+    return view('post')->with('post', $post);
 });
