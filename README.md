@@ -3,6 +3,8 @@ This package includes Laravel 5.4, along with various of the popular, and much u
 
 Incredibly useful if you are just getting started with Laravel, or for saving time when working on a new project.
 
+**New:** Added Excel extension "maatwebsite/excel"
+
 ## How to Install?
 
 Git pull/clone the package to the machine and install the packages.: 
@@ -50,6 +52,26 @@ Include the following in your blade template file
 @include('flash::message')
 ```
 
+### Excel Import and Export
+Now import (& Export) data from Excel Sheets. Can be used for seeding: 
+ ```
+ Excel::load(storage_path('import/Countries.xlsx'), function ($reader) {
+             $data = $reader->get();
+             foreach ($data as $datum) {
+ 
+                 \App\Country::create([
+                     'name' => $datum->country,
+                     'official_name' => $datum->full_name,
+                     'code' => $datum->iso_3166_1,
+                     'code_2' => $datum->iso_3166_2,
+                     'long' => $datum->longitude,
+                     'lat' => $datum->latitude,
+                     'zoom_level' => $datum->zoom_level,
+                 ]);
+             }
+         });
+ ```
+ For more details refer to documentation for ["maatwebsite/excel"](http://www.maatwebsite.nl/laravel-excel/docs/import) 
 
 ### Image Manipulation
 Basix also includes intervention/image and intervention/imagecache which let you manipulate images and cache directly via url.
