@@ -29,6 +29,10 @@ Route::get('imageManipulation', function () {
     return view('images');
 });
 
+Route::get('test', function () {
+
+});
+
 
 Auth::routes();
 

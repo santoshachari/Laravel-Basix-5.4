@@ -192,6 +192,8 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         //Laravel Socialite
         Laravel\Socialite\SocialiteServiceProvider::class,
+        // Excel Import and Export by MaatWebsite
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
     ],
 
@@ -251,6 +253,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
     ],
 
