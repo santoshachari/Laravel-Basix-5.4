@@ -33,6 +33,10 @@ Route::get('test', function () {
 
 });
 
+//File Upload example
+Route::get('/upload', 'UploadController@uploadForm');
+Route::post('/upload', 'UploadController@uploadSubmit');
+
 
 Auth::routes();
 

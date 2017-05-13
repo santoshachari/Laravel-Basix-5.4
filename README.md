@@ -16,6 +16,10 @@ php artisan key:generate
 
 ## Documentation
 
+### Sample File Upload code
+`App\Http\Controllers\UploadController.php` has the code for managing the file upload and receiving. 
+
+
 ### Generate Migration schema and Model from artisan commands
 
 Thanks to [Laracasts/Generators](https://github.com/laracasts/Laravel-5-Generators-Extended) , you can generate migrations, along with schemas using commands like:

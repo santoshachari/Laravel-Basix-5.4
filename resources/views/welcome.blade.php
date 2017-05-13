@@ -105,6 +105,7 @@
             @endif
 
             <a href="{{ url('/imageManipulation') }}">Image Manipulation</a>
+            <a href="{{ url('/upload') }}">File Uploads and Management</a>
         </div>
     </div>
 </div>
