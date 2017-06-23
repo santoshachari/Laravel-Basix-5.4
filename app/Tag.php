@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model  {
+class Tag extends Model  {
 
     
 
@@ -13,7 +13,7 @@ class Product extends Model  {
      *
      * @var string
      */
-    protected $table = 'products';
+    protected $table = 'tags';
 
     /**
      * Attributes that should be mass-assignable.
@@ -43,17 +43,20 @@ class Product extends Model  {
      */
     protected $dates = ['created_at', 'updated_at'];
 
-    public function photos()
+    /**
+     * Get all of the posts that are assigned this tag.
+     */
+    public function posts()
     {
-        return $this->hasMany(ProductsPhoto::class);
+        return $this->morphedByMany('App\Post', 'taggable');
     }
 
     /**
-     * Get all of the tags for the post.
+     * Get all of the products that are assigned this tag.
      */
-
-    public function tags()
+    public function products()
     {
-        return $this->morphToMany('App\Tag', 'taggable');
+        return $this->morphedByMany('App\Product', 'taggable');
     }
+
 }

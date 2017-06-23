@@ -68,5 +68,12 @@ class Post extends Model  {
     {
         return $this->belongsTo(User::class);
     }
+    /**
+     * Get all of the tags for the post.
+     */
+    public function tags()
+    {
+        return $this->morphToMany('App\Tag', 'taggable');
+    }
 
 }
