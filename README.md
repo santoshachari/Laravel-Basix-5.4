@@ -11,6 +11,7 @@ Git pull/clone the package to the machine and install the packages.:
 ```
 git clone https://github.com/santoshachari/Laravel-Basix-5.4.git
 composer install
+cp .env.example .env
 php artisan key:generate
 ```
 
